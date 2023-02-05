@@ -1,0 +1,3 @@
+[submodule "mpv/ModernX"]
+	path = mpv/ModernX
+	url = https://github.com/cyl0/ModernX
