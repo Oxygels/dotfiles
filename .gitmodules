@@ -1,6 +1,0 @@
-[submodule "mpv/ModernX"]
-	path = mpv/ModernX
-	url = https://github.com/cyl0/ModernX
-[submodule "mpv/thumbfast"]
-	path = mpv/thumbfast
-	url = https://github.com/po5/thumbfast.git
