@@ -1,0 +1,24 @@
+\set COMP_KEYWORD_CASE upper
+\set HISTFILE ~/.psql/history- :DBNAME
+
+-- formatting
+\x auto
+\set VERBOSITY verbose
+\set ON_ERROR_ROLLBACK interactive
+
+-- show execution times
+\timing
+
+-- limit paging
+\pset pager off
+
+-- replace nulls
+\pset null ¤
+\pset linestyle unicode
+\pset border 2
+
+-- colorize
+\set PROMPT1 '%[%033[1m%]%M %n@%/%R%[%033[0m%]%# '
+
+--harolds
+\set PROMPT2 '[more] %R > '
