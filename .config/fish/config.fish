@@ -7,6 +7,6 @@ end
 
 
 alias l="eza -l"
-alias la="eza -la"
+alias ll="eza -la"
 alias ip="ip -c"
 alias lg="lazygit"
