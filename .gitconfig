@@ -8,3 +8,6 @@
 
 [pull]
 	rebase = true
+
+[alias]
+	l = log --graph --oneline
