@@ -115,7 +115,3 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
-
-if [ -z "$TMUX" ]; then
-        tmux
-fi
