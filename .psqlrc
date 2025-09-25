@@ -1,5 +1,9 @@
+-- completion
 \set COMP_KEYWORD_CASE upper
+
+--history
 \set HISTFILE ~/.psql/history- :DBNAME
+\set HISTSIZE -1
 
 -- formatting
 \x auto
