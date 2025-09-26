@@ -21,4 +21,4 @@
     ck = checkout
     cm = commit -m
     p = pull
-    P = push
+    pu = push
