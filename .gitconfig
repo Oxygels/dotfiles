@@ -15,6 +15,7 @@
     st = stash
     sp = stash pop
     c = commit
+    ck = checkout
     cm = commit -m
     p = pull
     P = push
