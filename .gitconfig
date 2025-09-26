@@ -12,6 +12,8 @@
 [alias]
 	l = log --graph --oneline
     s = status
+    st = stash
+    sp = stash pop
     c = commit
     cm = commit -m
     p = pull
