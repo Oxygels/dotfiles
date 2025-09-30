@@ -22,3 +22,4 @@
     cm = commit -m
     p = pull
     pu = push
+    rmc = rm --cached
