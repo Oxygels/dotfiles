@@ -23,3 +23,4 @@
     p = pull
     pu = push
     rmc = rm --cached
+    t = tag
