@@ -1,10 +1,10 @@
 #!/bin/bash
 
 if [ "$#" -eq 0 ]; then
-    rsync -r -v --exclude ".git" --exclude "deploy.sh" "." "$HOME"
+    rsync -r -v --exclude ".git" --exclude "deploy.sh" --exclude ".placeholder" "." "$HOME"
 
 elif [ "$#" -eq 1 ]; then
-    rsync -r -v --exclude ".git" --exclude "deploy.sh" "." "$1:"
+    rsync -r -v --exclude ".git" --exclude "deploy.sh" --exclude ".placeholder" "." "$1:"
 
 else
     echo "Usage: deploy.sh [user@]hostname"
