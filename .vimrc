@@ -9,6 +9,9 @@ set autoread
 au FocusGained,BufEnter * silent! checktime
 
 " When searching try to be smart about cases
+" smartcase will do case sensitive search only if the pattern contains an uppercase letter
+" For this to work, ignorecase is also needed
+set ignorecase
 set smartcase
 
 " Show matching brackets when text indicator is over them
