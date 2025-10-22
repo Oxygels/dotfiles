@@ -1,2 +1,4 @@
-set show-all-if-ambiguous on
 set completion-ignore-case
+
+# Prevent blocking input and paging available completions
+set page-completions off
