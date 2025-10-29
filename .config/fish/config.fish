@@ -5,6 +5,7 @@ if status is-interactive
     end
 end
 
+export EDITOR=vim
 
 alias l="eza -l"
 alias ll="eza -la"
