@@ -1,16 +1,16 @@
 # This is Git's per-user configuration file.
 [user]
-	name = Oxygels
-	email = 39919597+Oxygels@users.noreply.github.com
+    name = Oxygels
+    email = 39919597+Oxygels@users.noreply.github.com
 
 [credential]
-	helper = cache --timeout=3600
+    helper = cache --timeout=3600
 
 [pull]
-	rebase = true
+    rebase = true
 
 [alias]
-	l = log --graph --oneline
+    l = log --graph --oneline
     a = add
     d = diff
     ds = diff --staged
@@ -28,4 +28,4 @@
 # Remove local branches not existing on remote
 # WARNING: Make sure you always create your branches (usually from issues) on Github
 [remote "origin"]
-	prune = true
+    prune = true
