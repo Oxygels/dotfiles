@@ -1,0 +1,10 @@
+#!/bin/bash
+
+if [ "$#" -ne 1 ]; then
+  echo "Usage: ssu <remote-path>"
+  exit 1
+fi
+
+mnt_point="/mnt/$(echo "$1" | cut -d@ -f2 | cut -d. -f1)"
+umount "$mnt_point"
+sudo rm -r "$mnt_point"

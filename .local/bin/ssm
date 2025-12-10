@@ -1,0 +1,12 @@
+#!/bin/bash
+
+if [ "$#" -ne 1 ]; then
+  echo "Usage: ssm <remote-path>"
+  exit 1
+fi
+
+mnt_point="/mnt/$(echo "$1" | cut -d@ -f2 | cut -d. -f1)"
+sudo mkdir "$mnt_point"
+sudo chown "$USER" "$mnt_point"
+
+sshfs -o max_conns=8 -o cache_timeout=115200 -o attr_timeout=115200 -o auto_cache -o idmap=user -o Cipher=arcfour -o Compression=no "$1":/opt "$mnt_point"
