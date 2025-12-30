@@ -17,6 +17,7 @@
     s = status
     st = stash
     sp = stash pop
+    sl = stash list
     c = commit
     ck = checkout
     cm = commit -m
