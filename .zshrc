@@ -631,7 +631,10 @@ function grmlcomp () {
 
     if [[ "$NOMENU" -eq 0 ]] ; then
         # if there are more than 5 options allow selecting from a menu
-        zstyle ':completion:*'               menu select=5
+        # zstyle ':completion:*'               menu select=5
+
+        # prevent prompting for tab confirmation
+        zstyle ':completion:*'               menu yes select
     else
         # don't use any menus at all
         setopt no_auto_menu
