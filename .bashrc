@@ -116,3 +116,7 @@ if ! shopt -oq posix; then
 fi
 
 export PROMPT_COMMAND='history -a;history -c;history -r'
+
+if [ -f /usr/bin/zsh ]; then
+    exec /usr/bin/zsh
+fi
