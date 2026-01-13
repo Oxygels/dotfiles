@@ -14,6 +14,7 @@
     a = add
     d = diff
     ds = diff --staged
+    dl = diff @~
     s = status
     st = stash
     sp = stash pop
