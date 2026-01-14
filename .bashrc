@@ -117,6 +117,7 @@ fi
 
 export PROMPT_COMMAND='history -a;history -c;history -r'
 
-if [ -f /usr/bin/zsh ]; then
-    exec /usr/bin/zsh
+# Escape to fish for domain accounts where chsh isn't possible
+if type fish > /dev/null; then
+    exec fish
 fi
