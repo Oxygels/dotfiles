@@ -118,6 +118,6 @@ fi
 export PROMPT_COMMAND='history -a;history -c;history -r'
 
 # Escape to fish for domain accounts where chsh isn't possible
-if type fish > /dev/null; then
+if type fish > /dev/null 2>&1; then
     exec fish
 fi
