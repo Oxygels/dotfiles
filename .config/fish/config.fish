@@ -17,6 +17,9 @@ else
     alias ll="ls -al"
 end
 
-alias ip="ip -c"
+if not type -q busybox
+    alias ip="ip -c"
+end
+
 alias lg="lazygit"
 alias c="bat"
