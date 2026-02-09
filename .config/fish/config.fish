@@ -2,7 +2,10 @@ if status is-interactive
     # This matching is necessary because the $TMUX variable isn't set when opening
     # a ssh connection through tmux
     # However the $TERM variable is kept
+    # The dolphin check is added to avoid unclosed tmux everywhere (causing issues with removable storage)
     if not string match -q 'tmux*' "$TERM"
+    and type -q fastfetch
+    and not string match -q '*Dolphin*' (fastfetch | grep Terminal)
         tmux
     end
 end
