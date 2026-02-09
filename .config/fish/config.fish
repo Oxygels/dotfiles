@@ -5,7 +5,7 @@ if status is-interactive
     # The dolphin check is added to avoid unclosed tmux everywhere (causing issues with removable storage)
     if not string match -q 'tmux*' "$TERM"
     and type -q fastfetch
-    and not string match -q '*Dolphin*' (fastfetch | grep Terminal)
+    and not string match -q '*dolphin*' (fastfetch | grep Terminal)
         tmux
     end
 end
