@@ -11,7 +11,7 @@ if status is-interactive
 end
 
 export EDITOR=vim
-export FZF_DEFAULT_COMMAND='fd --type f --strip-cwd-prefix --hidden --follow --exclude .git'
+export FZF_DEFAULT_COMMAND='fd --type f --strip-cwd-prefix --hidden --exclude .git'
 
 if type -q eza
     alias l="eza -l"
