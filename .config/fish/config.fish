@@ -13,14 +13,6 @@ end
 export EDITOR=vim
 export FZF_DEFAULT_COMMAND='fd --type f --strip-cwd-prefix --hidden --exclude .git'
 
-if type -q eza
-    alias l="eza -l"
-    alias ll="eza -la"
-else
-    alias l="ls -l"
-    alias ll="ls -al"
-end
-
 if not type -q busybox
     alias ip="ip -c"
     alias p="pgrep -li"
@@ -30,3 +22,5 @@ end
 
 alias lg="lazygit"
 alias c="bat"
+alias l="eza -l"
+alias ll="eza -la"
