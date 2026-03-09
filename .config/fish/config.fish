@@ -4,13 +4,13 @@ if status is-interactive
     # However the $TERM variable is kept
     # The dolphin check is added to avoid unclosed tmux everywhere (causing issues with removable storage)
     if not string match -q 'tmux*' "$TERM"
-    and type -q fastfetch
-    and not string match -q '*dolphin*' (fastfetch | grep Terminal)
+        and type -q fastfetch
+        and not string match -q '*dolphin*' (fastfetch | grep Terminal)
         tmux
     end
 end
 
-export EDITOR=vim
+export EDITOR=nvim
 export FZF_DEFAULT_COMMAND='fd --type f --strip-cwd-prefix --hidden --exclude .git'
 
 if not type -q busybox
@@ -25,3 +25,4 @@ alias c="bat"
 alias l="eza -l"
 alias ll="eza -la"
 alias d="du -haxd1 . | sort -h"
+alias e="$EDITOR"
