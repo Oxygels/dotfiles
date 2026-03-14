@@ -125,7 +125,6 @@ window {
 }
 
 #input image {
-  border: none;
   color: @red;
 }
 
@@ -134,13 +133,12 @@ window {
 }
 
 #input, #input:focus {
-    box-shadow: none;
+  box-shadow: none;
 }
 
 /* Text */
 #text {
   margin: 5px;
-  border: none;
   color: @text;
   animation: fadeIn 0.5s ease-in-out both;
 }
@@ -156,7 +154,6 @@ window {
 
 /* Selected Entry */
 #entry:selected {
-  border: none;
   outline: none;
 }
 
