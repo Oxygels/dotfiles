@@ -3,13 +3,13 @@
 -- Add any additional options here
 
 vim.filetype.add({
-    filename = {
-        ["kitty.conf"] = "kitty",
-    },
+	filename = {
+		["kitty.conf"] = "kitty",
+	},
 })
 
 vim.opt.tabstop = 4
 vim.opt.softtabstop = 4
 vim.opt.shiftwidth = 4
-vim.opt.expandtab = false
+vim.opt.expandtab = true
 vim.opt.cindent = true
