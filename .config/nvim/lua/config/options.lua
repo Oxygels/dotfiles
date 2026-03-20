@@ -17,3 +17,5 @@ opt.expandtab = true
 opt.cindent = true
 
 opt.wrap = true
+
+vim.g.lazyvim_python_lsp = "basedpyright"
