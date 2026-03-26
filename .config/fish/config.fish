@@ -1,3 +1,7 @@
+# Variables
+export EDITOR=nvim
+export FZF_DEFAULT_COMMAND='fd --type f --strip-cwd-prefix --hidden --exclude .git'
+
 if status is-interactive
     # This matching is necessary because the $TMUX variable isn't set when opening
     # a ssh connection through tmux
@@ -8,22 +12,23 @@ if status is-interactive
         and not string match -q '*dolphin*' (fastfetch | grep Terminal)
         tmux
     end
+
+    # Busybox
+    if not type -q busybox
+        alias ip="ip -c"
+        alias p="pgrep -li"
+    else
+        alias p="ps aux | rg -v '(ps aux|rg -)' | rg -i"
+    end
+
+    # Tools
+    alias lg="lazygit"
+    alias c="bat"
+    alias l="eza -l"
+    alias ll="eza -la"
+
+    # Utilities
+    alias d="du -haxd1 . | sort -h"
+    alias e="$EDITOR"
+    alias se="sudoedit"
 end
-
-export EDITOR=nvim
-export FZF_DEFAULT_COMMAND='fd --type f --strip-cwd-prefix --hidden --exclude .git'
-
-if not type -q busybox
-    alias ip="ip -c"
-    alias p="pgrep -li"
-else
-    alias p="ps aux | rg -v '(ps aux|rg -)' | rg -i"
-end
-
-alias lg="lazygit"
-alias c="bat"
-alias l="eza -l"
-alias ll="eza -la"
-alias d="du -haxd1 . | sort -h"
-alias e="$EDITOR"
-alias se="sudoedit"
