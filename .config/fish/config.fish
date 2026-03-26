@@ -26,6 +26,7 @@ if status is-interactive
     alias c="bat"
     alias l="eza -l"
     alias ll="eza -la"
+    alias lf="lfcd"
 
     # Utilities
     alias d="du -haxd1 . | sort -h"
