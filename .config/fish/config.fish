@@ -31,4 +31,6 @@ if status is-interactive
     alias d="du -haxd1 . | sort -h"
     alias e="$EDITOR"
     alias se="sudoedit"
+    alias tarc="tar -czf"
+    alias tarx="tar -xf"
 end
