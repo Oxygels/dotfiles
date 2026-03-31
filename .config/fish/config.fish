@@ -13,6 +13,9 @@ if status is-interactive
         tmux
     end
 
+    # Theme
+    fish_config theme choose catppuccin-mocha --color-theme=dark
+
     # Busybox
     if not type -q busybox
         alias ip="ip -c"
@@ -21,14 +24,15 @@ if status is-interactive
         alias p="ps aux | rg -v '(ps aux|rg -)' | rg -i"
     end
 
-    # Tools
+    # External tools
     alias lg="lazygit"
     alias c="bat"
     alias l="eza -l"
     alias ll="eza -la"
     alias lf="lfcd"
+    alias f="fastfetch"
 
-    # Utilities
+    # GNU tools
     alias d="du -haxd1 . | sort -h"
     alias e="$EDITOR"
     alias se="sudoedit"
