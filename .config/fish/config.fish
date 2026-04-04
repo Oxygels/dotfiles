@@ -31,6 +31,7 @@ if status is-interactive
     alias ll="eza -la"
     alias lf="lfcd"
     alias f="fastfetch"
+    alias b="btop"
 
     # GNU tools
     alias d="du -haxd1 . | sort -h"
