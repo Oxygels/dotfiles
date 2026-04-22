@@ -1,1 +1,9 @@
 set drawbox
+
+set previewer ~/.config/lf/preview
+set cleaner ~/.config/lf/cleaner
+
+# Necessary in tmux to prevent artifacts
+cmd on-select &{{
+  exec lf -remote 'send redraw'
+}}

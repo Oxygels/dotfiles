@@ -1,0 +1,23 @@
+#!/bin/bash
+
+draw_picture() {
+    kitty +kitten icat --silent --stdin no --transfer-mode file \
+        --place "${2}x${3}@${4}x${5}" "$1" </dev/null >/dev/tty
+    exit 1 # Prevent caching in tmux
+}
+
+case "$1" in
+*.jpg | *.jpeg | *.png | *.gif | *.webp | *.bmp)
+    # kitty +kitten icat --silent --stdin no --transfer-mode file \
+    # --place "${2}x${3}@${4}x${5}" "$1" </dev/null >/dev/tty
+    draw_picture "$@"
+    ;;
+
+*.avi | *.gif | *.mp4 | *.mkv | *.webm)
+    ffmpegthumbnailer -i "$1" -s 0 -q 5 -o "/tmp/thumbnail.png"
+    draw_picture "/tmp/thumbnail.png" "${@:2}"
+    ;;
+*)
+    bat --color=always --style=numbers "$1"
+    ;;
+esac
