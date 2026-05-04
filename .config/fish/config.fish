@@ -39,4 +39,5 @@ if status is-interactive
     alias se="sudoedit"
     alias tarc="tar -czf"
     alias tarx="tar -xf"
+    alias lsof="lsof +D" # Recursive lookup
 end
