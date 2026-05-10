@@ -19,8 +19,6 @@ if status is-interactive
     # Busybox
     if not type -q busybox
         alias ip="ip -c"
-        alias p="pgrep -li"
-    else
         alias p="ps aux | rg -v '(ps aux|rg -)' | rg -i"
     end
 
