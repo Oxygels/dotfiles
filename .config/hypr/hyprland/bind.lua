@@ -44,6 +44,8 @@ hl.bind(mainMod .. " + apostrophe", hl.dsp.focus({ workspace = 4 }))
 hl.bind(mainMod .. " + parenleft", hl.dsp.focus({ workspace = 5 }))
 hl.bind(mainMod .. " + minus", hl.dsp.focus({ workspace = 6 }))
 
+hl.bind("Print", hl.dsp.exec_cmd("hyprshot -d --freeze --clipboard-only -m region"))
+
 -- Move active window to a workspace with mainMod + SHIFT + [0-9]
 hl.bind(mainMod .. " + SHIFT + " .. "ampersand", hl.dsp.window.move({ workspace = 1 }))
 hl.bind(mainMod .. " + SHIFT + " .. "eacute", hl.dsp.window.move({ workspace = 2 }))
