@@ -15,7 +15,7 @@ hl.window_rule({
     match = { class = "steam" },
     content = "game",
 
-    workspace = "2",
+    workspace = "4",
 
     no_blur = true,
     no_anim = true,
