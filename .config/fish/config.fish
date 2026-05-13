@@ -38,4 +38,5 @@ if status is-interactive
     alias tarc="tar -czf"
     alias tarx="tar -xf"
     alias lsof="lsof +D" # Recursive lookup
+    alias df="df -Th"
 end
