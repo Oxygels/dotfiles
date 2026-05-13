@@ -17,10 +17,8 @@ hl.bind(mainMod .. " + K", hl.dsp.window.kill())
 hl.bind(mainMod .. " + L", hl.dsp.exec_cmd("hyprlock"))
 hl.bind(mainMod .. " + G", hl.dsp.exec_cmd("pavucontrol"))
 hl.bind(mainMod .. " + Z", hl.dsp.exec_cmd("blueman-manager"))
-hl.bind(
-    "ALT" .. " + twosuperior",
-    hl.dsp.exec_cmd("setxkbmap $(setxkbmap -query | awk" .. '/layout/{print ($2=="fr")?"us":"fr"}')
-)
+
+hl.bind("ALT" .. " + twosuperior", hl.dsp.exec_cmd(".local/bin/switch_keyboard_xwayland"))
 hl.bind(
     mainMod .. " + V",
     hl.dsp.exec_cmd(

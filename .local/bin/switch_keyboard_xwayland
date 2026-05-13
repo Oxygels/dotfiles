@@ -1,0 +1,3 @@
+#!/bin/bash
+
+setxkbmap $(setxkbmap -query | awk '/layout/{print ($2=="fr")?"us":"fr"}')
