@@ -9,6 +9,9 @@ map D trash
 cmd mkdir %mkdir "$@"
 map a push :mkdir<space>
 
+map d # Unbind cut
+map x cut
+
 set period 2 # Refresh files every 2 seconds
 
 # Necessary in tmux to prevent artifacts
