@@ -6,6 +6,9 @@ set cleaner ~/.config/lf/cleaner
 cmd trash %trash-put "$fx"
 map D trash
 
+cmd mkdir %mkdir "$@"
+map a push :mkdir<space>
+
 set period 2 # Refresh files every 2 seconds
 
 # Necessary in tmux to prevent artifacts
