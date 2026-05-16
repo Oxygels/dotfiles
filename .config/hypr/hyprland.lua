@@ -1,4 +1,5 @@
 require("hyprland/program")
+require("hyprland/misc")
 require("hyprland/autostart")
 require("hyprland/bind")
 require("hyprland/env")

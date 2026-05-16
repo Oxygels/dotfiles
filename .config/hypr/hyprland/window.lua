@@ -18,10 +18,13 @@ hl.window_rule({
     workspace = "4",
 
     no_blur = true,
-    no_anim = true,
     no_dim = true,
     opaque = true,
     immediate = true,
+
+    -- Needed for overlay
+    -- Throttled otherwise when steam isn't visible
+    render_unfocused = true,
 })
 
 hl.window_rule({
