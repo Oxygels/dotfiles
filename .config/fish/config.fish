@@ -32,6 +32,10 @@ if status is-interactive
     alias f="fastfetch"
     alias b="btop"
 
+    # Openssl
+    alias openssl_chain="openssl crl2pkcs7 -nocrl -certfile /dev/stdin | openssl pkcs7 -print_certs -text -noout" # To be piped (ex: cat)
+    alias openssl_connect="openssl s_client -showcerts -connect" # ip:port
+
     # GNU tools
     alias d="du -haxd1 . | sort -h"
     alias e="$EDITOR"
