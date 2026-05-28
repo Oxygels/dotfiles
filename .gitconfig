@@ -24,6 +24,7 @@
     cm = commit -m
     p = pull
     pu = push
+    pt = push --tag
     rmc = rm --cached
     t = tag
     ap = apply --3way
