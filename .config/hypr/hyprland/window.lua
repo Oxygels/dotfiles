@@ -59,3 +59,9 @@ hl.window_rule({
     match = { class = "discord" },
     workspace = "2",
 })
+
+hl.window_rule({
+    name = "bongocat",
+    match = { title = "BongoCat" },
+    float = true,
+})
