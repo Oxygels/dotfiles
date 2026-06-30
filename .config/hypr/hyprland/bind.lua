@@ -1,22 +1,27 @@
 local program = require("hyprland.program")
 
 local mainMod = "SUPER" -- Sets "Windows" key as main modifier
+local uwsm_prefix = "uwsm app -- "
 
 -- Example binds, see https://wiki.hypr.land/Configuring/Basics/Binds/ for more
-hl.bind(mainMod .. " + Return", hl.dsp.exec_cmd(program.terminal))
-hl.bind(
-    mainMod .. " + M",
-    hl.dsp.exec_cmd("command -v hyprshutdown >/dev/null 2>&1 && hyprshutdown || hyprctl dispatch 'hl.dsp.exit()'")
-)
-hl.bind(mainMod .. " + E", hl.dsp.exec_cmd(program.file))
-hl.bind(mainMod .. " + A", hl.dsp.exec_cmd(program.menu))
+
+-- If not using uwsm (not recommended)
+-- hl.bind(
+--     mainMod .. " + M",
+--     hl.dsp.exec_cmd("command -v hyprshutdown >/dev/null 2>&1 && hyprshutdown || hyprctl dispatch 'hl.dsp.exit()'")
+-- )
+
+hl.bind(mainMod .. " + M", hl.dsp.exec_cmd(uwsm_prefix .. "hyprshutdown"))
+hl.bind(mainMod .. " + Return", hl.dsp.exec_cmd(uwsm_prefix .. program.terminal))
+hl.bind(mainMod .. " + E", hl.dsp.exec_cmd(uwsm_prefix .. program.file))
+hl.bind(mainMod .. " + A", hl.dsp.exec_cmd(uwsm_prefix .. program.menu))
 hl.bind(mainMod .. " + F", hl.dsp.window.fullscreen({ action = "toggle" }))
 hl.bind(mainMod .. " + R", hl.dsp.window.close())
 hl.bind(mainMod .. " + K", hl.dsp.window.kill())
 
-hl.bind(mainMod .. " + L", hl.dsp.exec_cmd("hyprlock"))
-hl.bind(mainMod .. " + G", hl.dsp.exec_cmd("pavucontrol"))
-hl.bind(mainMod .. " + Z", hl.dsp.exec_cmd("blueman-manager"))
+hl.bind(mainMod .. " + L", hl.dsp.exec_cmd(uwsm_prefix .. "hyprlock"))
+hl.bind(mainMod .. " + G", hl.dsp.exec_cmd(uwsm_prefix .. "pavucontrol"))
+hl.bind(mainMod .. " + Z", hl.dsp.exec_cmd(uwsm_prefix .. "blueman-manager"))
 
 hl.bind("ALT" .. " + twosuperior", hl.dsp.exec_cmd(".local/bin/switch_keyboard_xwayland"))
 hl.bind(

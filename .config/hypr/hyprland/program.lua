@@ -1,7 +1,7 @@
 local programs = {
-	terminal = "kitty",
-	file = "lf",
-	menu = "wofi",
+    terminal = "kitty",
+    file = "lf",
+    menu = "fuzzel",
 }
 
 return programs

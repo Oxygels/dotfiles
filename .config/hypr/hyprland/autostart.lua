@@ -1,12 +1,15 @@
+local uwsm_prefix = "uwsm app -- "
+
 hl.on("hyprland.start", function()
     -- Managed by XDG Autostart, check /etc/xdg/autostart/
     -- hl.exec_cmd("nm-applet")
     -- hl.exec_cmd("blueman-applet")
-    hl.exec_cmd("hyprpaper")
-    hl.exec_cmd("waybar")
-    hl.exec_cmd("hyprsunset -t 4500")
+    hl.exec_cmd(uwsm_prefix .. "hyprpaper")
+    hl.exec_cmd(uwsm_prefix .. "waybar")
+    hl.exec_cmd(uwsm_prefix .. "hyprsunset -t 4500")
+    hl.exec_cmd(uwsm_prefix .. "wl-paste --type text --watch cliphist store")
+    hl.exec_cmd(uwsm_prefix .. "wl-paste --type image --watch cliphist store")
+
     hl.exec_cmd("systemctl --user start hyprpolkitagent")
-    hl.exec_cmd("wl-paste --type text --watch cliphist store")
-    hl.exec_cmd("wl-paste --type image --watch cliphist store")
     hl.exec_cmd("tmux kill-server")
 end)
