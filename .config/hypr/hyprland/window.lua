@@ -64,4 +64,5 @@ hl.window_rule({
     name = "bongocat",
     match = { title = "BongoCat" },
     float = true,
+    workspace = "2",
 })
