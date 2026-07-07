@@ -19,6 +19,7 @@ hl.bind(mainMod .. " + F", hl.dsp.window.fullscreen({ action = "toggle" }))
 hl.bind(mainMod .. " + R", hl.dsp.window.close())
 hl.bind(mainMod .. " + K", hl.dsp.window.kill())
 
+hl.bind(mainMod .. " + F1", hl.dsp.exec_cmd("hyprlock & systemctl suspend"))
 hl.bind(mainMod .. " + L", hl.dsp.exec_cmd(uwsm_prefix .. "hyprlock"))
 hl.bind(mainMod .. " + G", hl.dsp.exec_cmd(uwsm_prefix .. "pavucontrol"))
 hl.bind(mainMod .. " + Z", hl.dsp.exec_cmd(uwsm_prefix .. "blueman-manager"))
