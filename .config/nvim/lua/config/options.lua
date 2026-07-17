@@ -4,6 +4,7 @@
 
 -- Vim general settings
 local opt = vim.opt
+vim.opt.autochdir = true -- Switch the cwdir to the file/buffer currently open, useful for the "recent file" feature
 
 vim.filetype.add({
     filename = {
