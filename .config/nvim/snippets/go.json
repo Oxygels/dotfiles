@@ -3,7 +3,7 @@
     "prefix": "ie",
     "body": [
       "if err != nil {",
-      "\tlog.Panicln(\"$1\\n\",err)",
+      "\tlog.Panicln(err)",
       "}"
     ],
     "description": "if err != nil check"
