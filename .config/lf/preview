@@ -11,11 +11,15 @@ case "$1" in
     draw_picture "$@"
     ;;
 
-*.avi | *.gif | *.mp4 | *.mkv | *.webm | *.mov)
+*.avi | *.mp4 | *.mkv | *.webm | *.mov)
     ffmpegthumbnailer -i "$1" -s 0 -q 5 -o "/tmp/thumbnail.png"
     draw_picture "/tmp/thumbnail.png" "${@:2}"
     ;;
 *)
-    bat --color=always --style=numbers "$1"
+    if file "$1" | grep -q "text"; then
+        bat --color=always --style=numbers "$1"
+    else
+        hexyl -n 500 "$1"
+    fi
     ;;
 esac
