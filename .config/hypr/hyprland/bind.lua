@@ -11,7 +11,7 @@ local uwsm_prefix = "uwsm app -- "
 --     hl.dsp.exec_cmd("command -v hyprshutdown >/dev/null 2>&1 && hyprshutdown || hyprctl dispatch 'hl.dsp.exit()'")
 -- )
 
-hl.bind(mainMod .. " + M", hl.dsp.exec_cmd(uwsm_prefix .. "hyprshutdown"))
+hl.bind(mainMod .. " + exclam", hl.dsp.exec_cmd(uwsm_prefix .. "hyprshutdown"))
 hl.bind(mainMod .. " + Return", hl.dsp.exec_cmd(uwsm_prefix .. program.terminal))
 hl.bind(mainMod .. " + E", hl.dsp.exec_cmd(uwsm_prefix .. program.file))
 hl.bind(mainMod .. " + A", hl.dsp.exec_cmd(uwsm_prefix .. program.menu))
