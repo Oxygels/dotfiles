@@ -25,14 +25,7 @@ hl.bind(mainMod .. " + G", hl.dsp.exec_cmd(uwsm_prefix .. "pavucontrol"))
 hl.bind(mainMod .. " + Z", hl.dsp.exec_cmd(uwsm_prefix .. "blueman-manager"))
 
 hl.bind("ALT" .. " + twosuperior", hl.dsp.exec_cmd(".local/bin/switch_keyboard_xwayland"))
-hl.bind(
-    mainMod .. " + V",
-    hl.dsp.exec_cmd(
-        "cliphist list | wofi --dmenu --pre-display-cmd"
-            .. "echo '%s' | cut -f 2 | cut -c -45"
-            .. "| cliphist decode | wl-copy"
-    )
-)
+hl.bind(mainMod .. " + V", hl.dsp.exec_cmd("cliphist list | wofi --dmenu | cliphist decode | wl-copy"))
 
 -- Move focus with mainMod + arrow keys
 hl.bind(mainMod .. " + left", hl.dsp.focus({ direction = "left" }))
