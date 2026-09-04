@@ -39,6 +39,9 @@ hl.window_rule({
     no_dim = true,
     opaque = true,
     immediate = true,
+
+    -- Some anticheats (Elden Ring) detects low framerate when tabbed out
+    render_unfocused = true,
 })
 
 hl.window_rule({
