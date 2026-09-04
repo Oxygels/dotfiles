@@ -24,6 +24,7 @@ hl.window_rule({
 
     -- Needed for overlay
     -- Throttled otherwise when steam isn't visible
+    -- Be careful tho, if the fullscreen app is above steam (workspace 4) steam is still not render_unfocused
     render_unfocused = true,
 })
 
