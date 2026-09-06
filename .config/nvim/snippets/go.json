@@ -3,10 +3,10 @@
     "prefix": "ie",
     "body": [
       "if err != nil {",
-      "\tlog.Panicln(err)",
+      "\tpanic(err)",
       "}"
     ],
-    "description": "if err != nil check"
+    "description": "if err != nil panic"
   },
   "Error wrap": {
     "prefix": "iew",
