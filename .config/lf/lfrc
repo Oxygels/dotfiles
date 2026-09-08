@@ -11,6 +11,7 @@ map a push :mkdir<space>
 
 map d # Unbind cut
 map x cut
+map . set hidden!
 
 set period 2 # Refresh files every 2 seconds
 
