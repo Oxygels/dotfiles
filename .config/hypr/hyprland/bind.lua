@@ -13,7 +13,7 @@ local uwsm_prefix = "uwsm app -- "
 
 hl.bind(mainMod .. " + exclam", hl.dsp.exec_cmd(uwsm_prefix .. "hyprshutdown"))
 hl.bind(mainMod .. " + Return", hl.dsp.exec_cmd(uwsm_prefix .. program.terminal))
-hl.bind(mainMod .. " + E", hl.dsp.exec_cmd(uwsm_prefix .. program.file))
+hl.bind(mainMod .. " + E", hl.dsp.exec_cmd(uwsm_prefix .. program.terminal .. " " .. program.file))
 hl.bind(mainMod .. " + A", hl.dsp.exec_cmd(uwsm_prefix .. program.menu))
 hl.bind(mainMod .. " + F", hl.dsp.window.fullscreen({ action = "toggle" }))
 hl.bind(mainMod .. " + R", hl.dsp.window.close())
