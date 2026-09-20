@@ -1,4 +1,4 @@
-local program = require("hyprland.program")
+local program = require("hyprland/program")
 
 local mainMod = "SUPER" -- Sets "Windows" key as main modifier
 local uwsm_prefix = "uwsm app -- "
