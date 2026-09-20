@@ -59,6 +59,17 @@ hl.window_rule({
 })
 
 hl.window_rule({
+    name = "parsec",
+    match = { class = "parsecd" },
+    content = "game",
+
+    no_blur = true,
+    no_dim = true,
+    opaque = true,
+    immediate = true,
+})
+
+hl.window_rule({
     name = "discord",
     match = { class = "discord" },
     workspace = "2",
