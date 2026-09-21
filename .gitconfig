@@ -6,6 +6,10 @@
 [credential]
     helper = cache --timeout=3600
 
+# Push tags at the same time than commits
+[push]
+    followTags = true
+
 [pull]
     rebase = true
 
