@@ -29,6 +29,16 @@ hl.window_rule({
 })
 
 hl.window_rule({
+    name = "RetroArch",
+    match = { class = "com.libretro.RetroArch" },
+
+    no_blur = true,
+    no_dim = true,
+    opaque = true,
+    immediate = true,
+})
+
+hl.window_rule({
     name = "steam-games",
     match = { initial_class = "steam_app_.*" },
 
