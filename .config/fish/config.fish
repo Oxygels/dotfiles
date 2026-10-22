@@ -26,6 +26,7 @@ if status is-interactive
     # External tools
     alias lg="lazygit"
     alias c="bat"
+    alias cl="claude"
     alias l="eza -l"
     alias ll="eza -la"
     alias lf="lfcd"
